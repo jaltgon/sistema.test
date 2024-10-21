@@ -13,6 +13,5 @@ options {
 
     forward only;
 
-
     listen-on-v6 { none; };  // Solo escucha IPv4
 };

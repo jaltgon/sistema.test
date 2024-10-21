@@ -1,9 +1,9 @@
 zone "sistema.test" {
     type master;
-    file "/var/lib/bind/dns.sri";  // Archivo de zona
+    file "/var/lib/bind/dns.sri";  
 };
 
 zone "57.168.192.in-addr.arpa" {
     type master;
-    file "/var/lib/bind/db.57.168.192";  // Archivo de zona inversa
+    file "/var/lib/bind/db.57.168.192";  
 };
