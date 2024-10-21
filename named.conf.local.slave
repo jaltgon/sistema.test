@@ -1,0 +1,11 @@
+zone "sistema.test" {
+    type slave;
+    file "slaves/sistema.test.bk";  // Archivo donde se almacenará la zona transferida
+    masters { 192.168.57.103; };     // Dirección IP del servidor maestro
+};
+
+zone "57.168.192.in-addr.arpa" {
+    type slave;
+    file "slaves/57.168.192.in-addr.arpa.bk";  // Archivo de la zona inversa
+    masters { 192.168.57.103; };                // Dirección IP del servidor maestro
+};

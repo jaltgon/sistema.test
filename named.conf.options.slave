@@ -1,18 +1,13 @@
 options {
     directory "/var/cache/bind";
 
+    // Permitir consultas recursivas solo a estas redes
     allow-query { 127.0.0.0/8; 192.168.57.0/24; };
 
+    // Validación DNSSEC
     dnssec-validation yes;
 
-
-    forwarders {
-        208.67.222.222;  // OpenDNS
-    };
-
-
-    forward only;
-
-
+    // Otras configuraciones
+    auth-nxdomain no;  // Conformidad con RFC
     listen-on-v6 { none; };  // Solo escucha IPv4
 };
